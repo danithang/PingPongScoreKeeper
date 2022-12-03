@@ -16,7 +16,7 @@ const reset = document.querySelector("#reset");
 const playTo = document.querySelector("#playto");
 
 // establishing the winning score default and isGameOver is false
-let winningScore = 3;
+let winningScore = 6;
 let isGameOver = false
 
 // generic function that inputs player and opponent to shorten code, not differentiating between p1 and p2 specifically
@@ -25,7 +25,7 @@ let isGameOver = false
 // once 1 player gets to winningScore first the scores will stop increment because isGameOver is true
 function updateScore(player, opponent) {
     if (!isGameOver) {
-        player.score++;
+        player.score += 2;
         if (player.score === winningScore) {
            isGameOver = true;
            // using Bulma framework to change colors depending on who wins or loses
